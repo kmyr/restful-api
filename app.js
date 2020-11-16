@@ -9,8 +9,10 @@ app.use(cors())
 app.use(bodyParser.json())
 
 //import routes
-const postsRoute = require('./routes/computers-info')
-app.use('/',postsRoute)
+const computerRoute = require('./routes/computers.action')
+const stuffRoute = require('./routes/stuff.action')
+app.use('/computers',computerRoute)
+app.use('/stuff',stuffRoute)
 
 
 
@@ -24,17 +26,5 @@ mongoose.connect(process.env.DB_CONNECTION,{useNewUrlParser: true},(error)=> {
 
 
 //start listening to the server
-app.listen(3000)
+app.listen(process.env.PORT || 3000);
 
-
-
-
-
-
-
-
-
-//get
-//post
-//patch
-//delete
