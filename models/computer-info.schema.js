@@ -28,7 +28,8 @@ const mongoose = require('mongoose');
     }, 
     deviceOwner: {
         type: String,
-        required: false
+        required: false,
+        default: 'none'
     }, 
     graphic: {
         type: String,

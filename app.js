@@ -11,8 +11,10 @@ app.use(bodyParser.json())
 //import routes
 const computerRoute = require('./routes/computers.action')
 const stuffRoute = require('./routes/stuff.action')
+const employeeRoute = require('./routes/employees.action')
 app.use('/computers',computerRoute)
 app.use('/stuff',stuffRoute)
+app.use('/employees',employeeRoute)
 
 
 
